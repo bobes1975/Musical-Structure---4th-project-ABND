@@ -17,7 +17,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".CompositionList" />
-        <activity android:name=".composition_layout" />
         <activity android:name=".now_playing" />
     </application>
 

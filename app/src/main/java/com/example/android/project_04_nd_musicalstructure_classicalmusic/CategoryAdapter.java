@@ -12,14 +12,16 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+/**
+ * Created by Bobeš on 02-Mar-18.
+ */
 
 public class CategoryAdapter extends ArrayAdapter<Category> {
 
-    CategoryAdapter(Activity context, ArrayList<Category> category) {
+    public CategoryAdapter(Activity context, ArrayList<Category> category) {
         super(context, 0, category);
     }
 
-    @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         // Check if the existing view is being reused, otherwise inflate the view
@@ -33,7 +35,7 @@ public class CategoryAdapter extends ArrayAdapter<Category> {
         Category currentCategory = getItem(position);
 
         // Find the TextView in the category_list.xml layout with the ID category
-        TextView categoryTextView = listItemView.findViewById(R.id.category);
+        TextView categoryTextView = (TextView) listItemView.findViewById(R.id.category);
         // Get the category from the current object and
         // set this text on the name TextView
         assert currentCategory != null;
@@ -41,7 +43,7 @@ public class CategoryAdapter extends ArrayAdapter<Category> {
 
 
         //Find ImageView in the category_list.xml layout with the ID version_name
-        ImageView imageComposer = listItemView.findViewById(R.id.image);
+        ImageView imageComposer = (ImageView) listItemView.findViewById(R.id.image);
 
         // Check if an image is provided for this category or not
         if (currentCategory.hasImage()) {

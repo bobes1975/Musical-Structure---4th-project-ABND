@@ -1,9 +1,5 @@
 package com.example.android.project_04_nd_musicalstructure_classicalmusic;
 
-/**
- * Created by Bobeš on 02-Mar-18.
- */
-
 public class Category {
 
     /**
