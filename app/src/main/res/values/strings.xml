@@ -1,0 +1,109 @@
+<resources>
+
+    <!-- General terms -->
+    <string name="app_name">Musical Structure - Udacity Project</string>
+    <string name="composer">composer</string>
+    <string name="play_arrow">play arrow</string>
+    <string name="now_playing">Now playing . . .</string>
+    <string name="composition">composition</string>
+    <string name="beginning">Beginning</string>
+    <string name="position">Position</string>
+    <string name="total">Total</string>
+    <string name="end">End</string>
+    <string name="volume">Volume</string>
+    <string name="title_activity_header_info">header_info</string>
+    <string name="pause_button">pause button</string>
+    <string name="play_button">play button</string>
+    <string name="stop_button">stop button</string>
+
+
+    <!-- Header texts -->
+    <string name="header_category">Here you can chose category of classical music which are included in this app.</string>
+    <string name="header_playlist1">Here is the lists of available composition in</string>
+    <string name="header_playlist2">category. Pick up one of them.</string>
+
+
+    <!-- Category Names -->
+    <string name="piano_category">Piano Concerto</string>
+    <string name="violin_category">Violin Concerto</string>
+    <string name="organ_category">Organ Concerto</string>
+    <string name="trumpet_category">Trumpet Concerto</string>
+    <string name="opera_chorus_category">Opera Chorus Concerto</string>
+
+
+    <!-- Opera composition -->
+    <string name="servant_chorus">Servants chorus from Don Pasquale</string>
+    <string name="rejoice">Let us rejoice, let’s be merry from Bartered bride</string>
+    <string name="gypsy_chorus">Gypsy chorus from Il-Trovatore</string>
+    <string name="wedding_chorus">Wedding chorus from Lohengrin</string>
+    <string name="wartburg">Arrival of the guests at Wartburg from Tannhauser</string>
+
+
+    <!-- Organ composition -->
+    <string name="bwv560Gdur">Eight short preludes and fugues BWV553 560 G dur</string>
+    <string name="bwv560Fdur">Eight short preludes and fugues BWV553 560 F dur</string>
+    <string name="fantasia">Fantasia Fugue A minor BWV561</string>
+    <string name="toccataAndFugue">Toccata-and-Fugue in D minor</string>
+
+
+    <!-- Piano composition -->
+    <string name="concerto5E">Piano Concerto No. 5 in E flat major</string>
+    <string name="concerto1D">Piano Concerto No.1 in D minor part 3</string>
+    <string name="concerto1E">Piano Concerto No.1 in E flat major Allegro Marziale</string>
+    <string name="rondo">Rondo alla Turca Sonata No.11</string>
+    <string name="concerto1B">Piano Concerto No.1 in B flat</string>
+
+    <!-- Trumpet composition -->
+    <string name="concertoD">Concerto in D major for violin, cello, trumpet and strings</string>
+    <string name="triumphal">Triumphal march and chorus from Aida</string>
+    <string name="concerto2">Concerto for 2 oboes, bassoon, 2 trumpets, strings</string>
+    <string name="concertoC">Concerto for 2 trumpets and orchestra in C major</string>
+
+    <!-- Violin composition -->
+    <string name="violinDmajor">Violin Concerto in D major</string>
+    <string name="concerto26">Concerto No. 26 Bourree</string>
+    <string name="concertoOp36">Concerto for violin and orchestra D major Op. 35 finale</string>
+
+
+    <!-- composers -->
+    <string name="beethovenName">Ludwig van</string>
+    <string name="beethovenSurname">Beethoven</string>
+
+    <string name="brahmsName">Johannes</string>
+    <string name="brahmsSurname">Brahms</string>
+
+    <string name="handelName">Georg Friedrich</string>
+    <string name="handelSurname">Handel</string>
+
+    <string name="tchaikovskyName">Piotr Ilyich</string>
+    <string name="tchaikovskySurname">Tchaikovsky</string>
+
+    <string name="telemanName">Georg Philipp</string>
+    <string name="telemanSurname">Telemann</string>
+
+    <string name="verdiName">Giuseppe</string>
+    <string name="verdiSurname">Verdi</string>
+
+    <string name="vivaldiName">Antonio</string>
+    <string name="vivaldiSurname">Vivaldi</string>
+
+    <string name="lisztName">Franz</string>
+    <string name="lisztSurname">Liszt</string>
+
+    <string name="mozartName">Wolfgang Amadeus</string>
+    <string name="mozartSurname">Mozart</string>
+
+    <string name="bachName">Johann Sebastian</string>
+    <string name="bachSurname">Bach</string>
+
+    <string name="donizettiName">Gaetano</string>
+    <string name="donizettiSurname">Donizetti</string>
+
+    <string name="smetanaName">Bedrich</string>
+    <string name="smetanaSurname">Smetana</string>
+
+    <string name="wagnerName">Richard</string>
+    <string name="wagnerSurname">Wagner</string>
+
+
+</resources>

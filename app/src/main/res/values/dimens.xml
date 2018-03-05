@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dim1">1dp</dimen>
+    <dimen name="dim4">4dp</dimen>
+    <dimen name="dim8">8dp</dimen>
+    <dimen name="dim16">16dp</dimen>
+    <dimen name="dim26">26dp</dimen>
+    <dimen name="dim30">30dp</dimen>
+    <dimen name="dim40">40dp</dimen>
+    <dimen name="dim50">50dp</dimen>
+    <dimen name="dim80">80dp</dimen>
+    <dimen name="dim90">90dp</dimen>
+    <dimen name="dim150">150dp</dimen>
+    <dimen name="dim190">190dp</dimen>
+
+    <dimen name="text12">12sp</dimen>
+    <dimen name="text16">16sp</dimen>
+    <dimen name="text18">18sp</dimen>
+    <dimen name="text20">20sp</dimen>
+    <dimen name="text22">22sp</dimen>
+    <dimen name="text30">30sp</dimen>
+    <dimen name="text40">40sp</dimen>
+    <dimen name="text60">60sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>

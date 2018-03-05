@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/dim16"
+    tools:context="com.example.android.project_04_nd_musicalstructure_classicalmusic.now_playing">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    <TextView
+        android:id="@+id/nowPlaying"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/dim26"
+        android:text="@string/now_playing"
+        android:textSize="@dimen/text20" />
+
+    <ImageView
+        android:id="@+id/composerImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nowPlaying"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/composer"
+        android:src="@drawable/wolfgang_amadeus_mozart" />
+
+    <TextView
+        android:id="@+id/composer"
+        style="@style/playingNow"
+        android:layout_below="@+id/composerImage"
+        android:text="@string/composer"
+        android:textSize="@dimen/text16" />
+
+    <TextView
+        android:id="@+id/composition"
+        style="@style/playingNow"
+        android:layout_below="@+id/composer"
+        android:text="@string/composition"
+        android:textSize="@dimen/text20" />
+
+    <TextView
+        android:id="@+id/volume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/composition"
+        android:layout_marginTop="@dimen/dim8"
+        android:text="@string/volume" />
+
+    <SeekBar
+        android:id="@+id/seekMusic"
+        style="@style/seekBar"
+        android:layout_below="@id/volume" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/seekMusic"
+        android:layout_marginTop="@dimen/dim40"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/pause"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/pause_button"
+            android:src="@drawable/ic_pause_grey600_36dp" />
+
+        <ImageButton
+            android:id="@+id/play"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/play_button"
+            android:src="@drawable/ic_play_grey600_36dp" />
+
+        <ImageButton
+            android:id="@+id/stop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/stop_button"
+            android:src="@drawable/ic_stop_grey600_36dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.android.project_04_nd_musicalstructure_classicalmusic.CategoryList">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/dim90"
+        android:layout_height="@dimen/dim90"
+        android:contentDescription="@string/composer"
+        android:src="@drawable/piano" />
+
+    <LinearLayout
+        android:id="@+id/text_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim50"
+        android:layout_alignBottom="@id/image"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@id/image"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dim16">
+
+        <TextView
+            android:id="@+id/category"
+            style="@style/composer"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textStyle="bold"
+            tools:text="Piano Concerto" />
+
+    </LinearLayout>
+
+</RelativeLayout>
