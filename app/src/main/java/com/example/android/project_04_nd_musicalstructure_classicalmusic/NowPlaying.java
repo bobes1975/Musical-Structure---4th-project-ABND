@@ -1,9 +1,12 @@
 package com.example.android.project_04_nd_musicalstructure_classicalmusic;
 
 import android.content.Context;
+import android.content.Intent;
 import android.media.AudioManager;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -14,13 +17,13 @@ import android.widget.Toast;
 
 import static android.media.AudioManager.STREAM_MUSIC;
 
-public class now_playing extends AppCompatActivity implements View.OnClickListener {
+public class NowPlaying extends AppCompatActivity implements View.OnClickListener {
 
     private AudioManager audioManager = null;
 
-    private ImageButton play;
-    private ImageButton stop;
-    private ImageButton pause;
+    private ImageButton mPlay;
+    private ImageButton mStop;
+    private ImageButton mPause;
 
     private String namePlaying;
     private String compositionPlaying;
@@ -36,20 +39,24 @@ public class now_playing extends AppCompatActivity implements View.OnClickListen
         setContentView(R.layout.now_playing);
         setVolumeControlStream(STREAM_MUSIC);
 
-        play = findViewById(R.id.play);
-        pause = findViewById(R.id.pause);
-        stop = findViewById(R.id.stop);
+        mPlay = findViewById(R.id.play);
+        mPause = findViewById(R.id.pause);
+        mStop = findViewById(R.id.stop);
+        ImageButton mHome = findViewById((R.id.categoryButton));
 
         // Set OnClickListeners on clickable items
-        play.setOnClickListener(this);
-        stop.setOnClickListener(this);
-        pause.setOnClickListener(this);
+        mPlay.setOnClickListener(this);
+        mStop.setOnClickListener(this);
+        mPause.setOnClickListener(this);
 
 
         //get info from CompositionList
         Bundle bundle = getIntent().getExtras();
-        assert bundle != null;
-        String mIntentMessage = bundle.getString("message");
+
+        String mIntentMessage = null;
+        if (bundle != null) {
+            mIntentMessage = bundle.getString(Util.INTENT_KEY_NAME);
+        }
 
         // Splits intent message received into composer name, composition
         assert mIntentMessage != null;
@@ -57,8 +64,28 @@ public class now_playing extends AppCompatActivity implements View.OnClickListen
         namePlaying = intentMsgArray[0];
         compositionPlaying = intentMsgArray[1];
 
+
+        //home button to category_list
+        mHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent backToCategory = new Intent(NowPlaying.this, CategoryList.class);
+                NowPlaying.this.startActivity(backToCategory);
+            }
+        });
         playingNow();
         volumeControl();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     public void playingNow() {
@@ -91,15 +118,15 @@ public class now_playing extends AppCompatActivity implements View.OnClickListen
     @Override
     public void onClick(View v) {
 
-        if (v.equals(play)) {
-            Toast.makeText(this, "Here will be code for playing", Toast.LENGTH_SHORT).show();
+        if (v.equals(mPlay)) {
+            Toast.makeText(this, getString(R.string.playing), Toast.LENGTH_SHORT).show();
         }
-        if (v.equals(pause)) {
-            Toast.makeText(this, "Here will be code for pausing", Toast.LENGTH_SHORT).show();
+        if (v.equals(mPause)) {
+            Toast.makeText(this, getString(R.string.pausing), Toast.LENGTH_SHORT).show();
         }
 
-        if (v.equals(stop)) {
-            Toast.makeText(this, "Here will be code for stopping", Toast.LENGTH_SHORT).show();
+        if (v.equals(mStop)) {
+            Toast.makeText(this, getString(R.string.stopping), Toast.LENGTH_SHORT).show();
 
         }
     }
@@ -132,7 +159,5 @@ public class now_playing extends AppCompatActivity implements View.OnClickListen
             e.printStackTrace();
         }
     }
-
-
 }
 

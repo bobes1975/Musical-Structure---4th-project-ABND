@@ -16,8 +16,32 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CompositionList" />
-        <activity android:name=".now_playing" />
+
+
+        <activity android:name=".CompositionList"
+            android:launchMode="singleTask"
+            android:label="@string/playlist"
+            android:parentActivityName=".CategoryList">
+
+            <!-- Parent activity meta-data to support 4.0 or lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CategoryList" />
+        </activity>
+
+        <activity android:name=".NowPlaying"
+            android:launchMode="singleTask"
+            android:label="@string/now_playing"
+            android:parentActivityName=".CompositionList">
+
+            <!-- Parent activity meta-data to support 4.0 or lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CompositionList" />
+
+        </activity>
+
+
     </application>
 
 </manifest>

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:id="@+id/categoryScreen"
     tools:context="com.example.android.project_04_nd_musicalstructure_classicalmusic.CategoryList">
 
     <ImageView
@@ -27,7 +28,7 @@
             style="@style/composer"
             android:textAppearance="?android:textAppearanceMedium"
             android:textStyle="bold"
-            tools:text="Piano Concerto" />
+            tools:text="@string/category" />
 
     </LinearLayout>
 

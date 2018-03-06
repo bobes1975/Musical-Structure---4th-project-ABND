@@ -16,6 +16,14 @@
     <string name="play_button">play button</string>
     <string name="stop_button">stop button</string>
 
+    <string name="pausing">Here will be code for pausing</string>
+    <string name="playing">Here will be code for playing</string>
+    <string name="stopping">Here will be code for stopping</string>
+
+    <string name="category">Category</string>
+    <string name="playlist">Playlist</string>
+
+    <string name="home_button">home button</string>
 
     <!-- Header texts -->
     <string name="header_category">Here you can chose category of classical music which are included in this app.</string>
@@ -104,6 +112,7 @@
 
     <string name="wagnerName">Richard</string>
     <string name="wagnerSurname">Wagner</string>
+
 
 
 </resources>

@@ -30,6 +30,8 @@ public class CompositionAdapter extends ArrayAdapter<Composition> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+
+
         // Check if the existing view is being reused, otherwise inflate the view
         View listItemView = convertView;
         if (listItemView == null) {

@@ -23,8 +23,9 @@ public class CompositionList extends AppCompatActivity implements ListView.OnIte
         setContentView(R.layout.composition_layout);
 
         Bundle bundle = getIntent().getExtras();
-        assert bundle != null;
-        mIntentMessage = bundle.getString("message");
+        if (bundle != null) {
+            mIntentMessage = bundle.getString(Util.INTENT_KEY_NAME);
+        }
 
         // Display list of compositions based on category chosen
         createCompositionList();
@@ -139,10 +140,8 @@ public class CompositionList extends AppCompatActivity implements ListView.OnIte
         String composerForPlaying = textComposerChosen.getText().toString();
 
         intentExtra = composerForPlaying + "|" + compositionForPlaying;
-        Intent intent = new Intent(context, now_playing.class);
+        Intent intent = new Intent(context, NowPlaying.class);
         intent.putExtra("message", intentExtra);
         startActivity(intent);
-
     }
-
 }
